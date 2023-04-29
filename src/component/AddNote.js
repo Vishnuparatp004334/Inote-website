@@ -15,15 +15,15 @@ const AddNote = (props) => {
         setNote({...note, [e.target.name]: e.target.value})
     }
     return (
-        <div className='container mt-5'>
-            <h2>Add a Note</h2>
+        <div className='container mt-4'>
+            <h2>Add a Book</h2>
             <form className='my-3'>
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title</label>
+                    <label htmlFor="title" className="form-label">Book Title</label>
                     <input type="text" className="form-control" id="title" name="title" value = {note.title} aria-describedby="emailHelp" onChange={onChange} minLength={5} required/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="description" className="form-label">Description</label>
+                    <label htmlFor="description" className="form-label">Author Name</label>
                     <input type="text" className="form-control" id="description" value = {note.description} name="description" onChange={onChange} minLength={5} required/>
                 </div>
                 <div className="mb-3">
@@ -31,7 +31,7 @@ const AddNote = (props) => {
                     <input type="text" className="form-control" id="tag" value = {note.tag} name="tag" onChange={onChange} minLength={5} required />
                 </div>
               
-                <button disabled = {note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>Add Notes</button>
+                <button disabled = {note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>Add Book</button>
             </form>
         </div>
     )

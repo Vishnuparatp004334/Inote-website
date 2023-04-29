@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://127.0.0.1:27017/inoteUser"
+const mongoURI = "mongodb://127.0.0.1:27017/inoteBook"
 
 mongoose.set('strictQuery', false);
 
